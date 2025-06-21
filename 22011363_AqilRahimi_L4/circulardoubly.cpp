@@ -1,4 +1,4 @@
-/** doubly linked list
+/** circular doubly linked list
 Name: Muhammad Aqil Rahimi bin Mohamad Rasidi
 id: 22011363
 lab G2
@@ -15,8 +15,8 @@ public:
 
     Node(string name) {
         this->name = name;
-        next = nullptr;
-        prev = nullptr;
+        this->next = nullptr;
+        this->prev = nullptr;
     }
 };
 
@@ -34,52 +34,77 @@ public:
         if (head == nullptr) {
             head = node;
             tail = node;
+            head->next = head;
+            head->prev = head;
         } else {
             tail->next = node;
             node->prev = tail;
+            node->next = head;
+            head->prev = node;
             tail = node;
         }
     }
 
     void display_forward() {
-        Node* currNode = head;
-        while (currNode != nullptr) {
-            cout << currNode->name;
-            if (currNode->next != nullptr) cout << " -> ";
-            currNode = currNode->next;
-        }
-        cout << endl;
+        if (head == nullptr) return;
+
+        Node* curr = head;
+        do {
+            cout << curr->name << " -> ";
+            curr = curr->next;
+        } while (curr != head);
+        cout << head->name << " (back to start)" << endl;
     }
 
+
     void display_backward() {
-        Node* currNode = tail;
-        while (currNode != nullptr) {
-            cout << currNode->name;
-            if (currNode->prev != nullptr) cout << " <- ";
-            currNode = currNode->prev;
-        }
-        cout << endl;
+    if (tail == nullptr) return;
+
+    Node* curr = tail;
+    do {
+        cout << curr->name << " <- ";
+        curr = curr->prev;
+    } while (curr != tail);
+    cout << tail->name << " (back to end)" << endl;
     }
 
     void delete_value(string name) {
+        if (head == nullptr) return;
+
         Node* curr = head;
-        while (curr != nullptr) {
+        do {
             if (curr->name == name) {
+                // Only one node in the list
+                if (curr == head && curr == tail) {
+                    delete curr;
+                    head = nullptr;
+                    tail = nullptr;
+                    return;
+                }
+
+                // Deleting head
                 if (curr == head) {
-                    head = curr->next;
-                    if (head != nullptr) head->prev = nullptr;
-                } else if (curr == tail) {
-                    tail = curr->prev;
-                    if (tail != nullptr) tail->next = nullptr;
-                } else {
+                    head = head->next;
+                    tail->next = head;
+                    head->prev = tail;
+                }
+                // Deleting tail
+                else if (curr == tail) {
+                    tail = tail->prev;
+                    tail->next = head;
+                    head->prev = tail;
+                }
+                // Deleting middle node
+                else {
                     curr->prev->next = curr->next;
                     curr->next->prev = curr->prev;
                 }
+
                 delete curr;
                 return;
             }
             curr = curr->next;
-        }
+        } while (curr != head);
     }
 };
 
@@ -102,7 +127,7 @@ int main() {
 
     std_list.delete_value("Ahmed");
 
-    cout << "\nAfter deleting 'Ahmed':\n";
+    cout << "\nAfter deleting 'Ahmed':" << endl;
 
     cout << "Forward: ";
     std_list.display_forward();
