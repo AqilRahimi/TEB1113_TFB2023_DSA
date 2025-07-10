@@ -9,3 +9,5 @@ by Muhammad Aqil Rahimi
 | 05/6/2025 | 2   | - [Easy](Lab2/easy_L2.cpp) <br> - [Medium](Lab2/medium_L2.cpp) <br> - [Hard](Lab2/hard_L2.cpp)              |
 | 12/6/2025 | 3   | - [Singly](Lab3/singly.cpp) <br> - [Doubly](Lab3/doubly.cpp)                                                |
 | 19/6/2025 | 4   | - [Circular](Lab4/circular.cpp) <br> - [Circular Doubly](Lab4/circulardoubly.cpp)                           |
+| 26/6/2025 | 5   | - [Stack](Lab5/stack.cpp)                                                                                   |
+| 3/7/2025  | 6   | - [Queue](Lab6/queue.cpp) <br> - [Queue using array](Lab6/queue using array.cpp)                            |
