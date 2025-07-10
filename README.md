@@ -10,4 +10,4 @@ by Muhammad Aqil Rahimi
 | 12/6/2025 | 3   | - [Singly](Lab3/singly.cpp) <br> - [Doubly](Lab3/doubly.cpp)                                                |
 | 19/6/2025 | 4   | - [Circular](Lab4/circular.cpp) <br> - [Circular Doubly](Lab4/circulardoubly.cpp)                           |
 | 26/6/2025 | 5   | - [Stack](Lab5/stack.cpp)                                                                                   |
-| 3/7/2025  | 6   | - [Queue](Lab6/queue.cpp) <br> - [Queue using array](Lab6/queue using array.cpp)                            |
+| 3/7/2025  | 6   | - [Queue](Lab6/queue.cpp) <br> - [Queue using array](Lab6/queue_using_array.cpp)                            |
