@@ -11,3 +11,6 @@ by Muhammad Aqil Rahimi
 | 19/6/2025 | 4   | - [Circular](Lab4/circular.cpp) <br> - [Circular Doubly](Lab4/circulardoubly.cpp)                           |
 | 26/6/2025 | 5   | - [Stack](Lab5/stack.cpp)                                                                                   |
 | 3/7/2025  | 6   | - [Queue](Lab6/queue.cpp) <br> - [Queue using array](Lab6/queue_using_array.cpp)                            |
+| 10/7/2025 | 7   | - [Binary Tree](Lab7/BinaryTree.cpp)                                                                        |
+| 17/7/2025 | 8   | - [Binary Search Tree](Lab8/BinarySearchTree.cpp)                                                           |
+| 24/7/2025 | 9   | - [Graph](Lab9/Graph.cpp)                                                                                   |
